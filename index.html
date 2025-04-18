@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakenge's Portfollio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="entete">
+            <div class="logo"><span>C</span>odeur<b>.</b></div>
+            <div class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="About.html">À propos</a></li>
+                <li><a href="Compétences.html">Compétences</a></li>
+                <li><a href="Projets.html">Projets</a></li>
+            </div>
+            <div class="reseaux">
+                <a href="https://www.facebook.com/wakenge.meshack.7 " target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> 
+            </div>
+        </nav>
+        <div class="corps">
+            <div class="Cgauche">
+                <span class="textB">Salut</span>
+                <h1>Je suis <span id="textDefil"></span></h1>
+                <p>Un développeur web passionné par la technologie moderne. <br>
+                    Je me sens à l'aise quand je mets ma connaissance au profit des problèmes de ma société! <br>
+                    Si vous recherchez un développeur passionné, curieux et engagé, n'hésitez pas de me contacter.
+                </p>
+                <div class="bt2">
+                    <button><a href="Mon CV.pdf" download class="btn">Télécharger mon CV</a>
+                    </button>
+                    <button><a href="Me contacter" class="btn">Contactez moi</a>
+                    </button>
+                </div>
+            </div>
+            <div class="Cdroite">
+                <div class="Gimg">
+                    <img src="Média/image.jpg" alt="Ma_photo" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed('#textDefil', {
+    strings: ["LUNGELE", "WAKENGE", "Meshack"],
+    loop: true,  // Changé de 1 à true pour une boucle infinie
+    startDelay: 150,
+    backSpeed: 150,
+    typeSpeed: 50,
+    backDelay: 1000,  // Ajouté pour faire une pause entre chaque cycle
+    smartBackspace: true  // Ajouté pour une meilleure animation de retour
+  });
+</script>
+</html>

@@ -1,0 +1,434 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.container{
+    width: 100%;
+    background-color: #f3f3f8;
+}
+
+.entete{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 70px;
+    color: #ffe800;
+}
+
+.logo span{
+    color: #ffe800;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin: 0 15px;
+}
+
+.menu li a{
+    font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.reseaux a{
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+
+.menu li:hover a, .reseaux a:hover{
+    color: #ffe800;
+}
+
+.corps{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    position: relative;
+}
+
+.Cgauche, .Cdroite{
+    width: 50%;
+}
+
+.Cgauche{
+    z-index: 5;
+}
+
+.textB{
+    margin: 10px;
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+    margin: 20px;
+}
+
+.textB::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #ffe800;
+}
+
+h1{
+    margin: 20px;
+    display: block;
+    font-size: 3em;
+    font-weight: 900;
+    color: #3d535f;
+}
+
+p{
+    margin: 20px;
+    display: block;
+    width: 90%;
+    font-size: 1.3em;
+    text-align: justify;
+    color: #3d535f;
+}
+
+.bt2{
+    width: 100%;
+    position: relative;
+    left: 50px;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: #3d535f;
+    color: #fff;
+    padding: 8px 14px;
+    margin: 10px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 400%;
+}
+.bt2 a{
+    font-size: 30px;
+    color: white;
+    margin: 25px 10px;
+}
+.Gimg {
+    position: relative;
+    height: 100%;
+    width: calc(105%);
+    right: -25%;
+    top: 5px;
+    /* animer le mouvement de la photo */
+    animation: animateImg 5s linear infinite;
+}
+.media{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px;
+    letter-spacing: 3px;
+}
+.ch1{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+a{
+    padding-top: 20px;
+    font-size: 20px;
+}
+a:hover{
+color: #ffe800;
+transition: 1s;
+}
+/* mettre l'image dans un cercle et bien  positionner cette dernière*/
+img {
+    object-fit: cover;
+    border-radius: 70%;
+}
+/* déclaration de l'animation */
+@keyframes animateImg {
+    50% {
+        right: 10px;
+        top: 15px;
+    }
+}
+
+/* Modification de cette partie pour aligner l'animation et création de la boule*/
+.Gimg #dim {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    filter: saturate(200%);
+    animation: animateImg 5s linear infinite; /* Utiliser la même animation que .Gimg */
+}
+
+.corps::before{
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ffe800, pink);
+    left: -17%;
+    top: 40%;
+    z-index: -1;
+    animation: beforeAnime 6s linear infinite;
+}
+@keyframes beforeAnime{
+    50%{
+        left: -13%;
+        top: 41%;
+    }
+}
+
+.corps::after{
+    position: absolute;
+    content: '';
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ffe800, pink);
+    left: 35%;
+    top: 15%;
+    z-index: -1;
+    animation: afterAnime 6s linear infinite;
+}
+@keyframes afterAnime{
+    50%{
+        left: 27%;
+        top: 10%;
+    }
+}
+
+#textDefil{
+    color: #ffe800;
+}
+
+/* Ajout de la boule derrière la photo */
+.Cdroite {
+    position: relative;
+}
+
+.Cdroite::before {
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ffe800, pink);
+    right: -17%;
+    top: 40%;
+    z-index: 0;
+    animation: rightBeforeAnime 6s linear infinite;
+}
+
+@keyframes rightBeforeAnime {
+    50% {
+        right: -13%;
+        top: 41%;
+    }
+}
+
+/* button:hover{
+    background-color: #ffe800
+} */
+
+@media screen and (max-width: 1024px) {
+    .corps {
+        flex-direction: column-reverse;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .Cgauche, .Cdroite {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .Gimg {
+        right: 0;
+        width: 100%;
+    }
+
+    .Cdroite::before {
+        height: 300px;
+        width: 300px;
+        right: -5%;
+        opacity: 0.3;
+    }
+
+    .bt2 {
+        left: 0;
+        text-align: center;
+    }
+
+    p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .entete {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 5px 0;
+    }
+    .media{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 5px 0;
+    }
+    .ch1{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    .menu li {
+        margin: 2px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 2px 0;
+        font-size: 1.2em;
+        line-height: 1.2;
+    }
+
+    .Gimg {
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2px;
+    }
+
+    .Gimg img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .reseaux {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 2px 0;
+        order: 999;
+    }
+
+    .reseaux a {
+        margin: 0 15px;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .corps {
+        padding: 15px;
+    }
+
+    .Cgauche {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .corps::before, .corps::after, .Cdroite::before {
+        opacity: 0.5;
+    }
+
+    .Gimg {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .corps {
+        padding: 10px;
+    }
+
+    .Cgauche, .Cdroite {
+        padding: 10px;
+    }
+
+    .Cdroite::before {
+        height: 200px;
+        width: 200px;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.4;
+    }
+
+    .entete {
+        padding: 10px;
+    }
+
+    .menu li a {
+        font-size: 1.1em;
+    }
+
+    .reseaux a {
+        margin: 0 15px;
+    }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
